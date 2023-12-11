@@ -3,7 +3,7 @@
 	url = https://aur.archlinux.org/betterlockscreen.git
 [submodule "librewolf-bin"]
 	path = librewolf-bin
-	url = https://aur.archlkinux.org/librewolf-bin.git
+	url = https://aur.archlinux.org/librewolf-bin.git
 [submodule "paru"]
 	path = paru
 	url = https://aur.archlinux.org/paru.git
