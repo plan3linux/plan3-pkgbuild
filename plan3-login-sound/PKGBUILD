@@ -12,7 +12,7 @@ license=('GPL3')
 depends=('bspwm' 'polybar' 'rofi' 'picom' 'sxhkd' 'conky' 'plan3-base-config-git')
 makedepends=('git')
 options=(!strip !emptydirs)
-install='readme.install'
+#install='readme.install'
 conflicts=()
 replaces=()
 source=($_pkgname-${pkgver}-${pkgrel}::git+$url)
@@ -24,7 +24,7 @@ package() {
     mkdir -p ${pkgdir}/usr/share/sounds/login
 
     install -Dm644 ${srcdir}/${_pkgname}-${pkgver}-${pkgrel}/startup.ogg ${pkgdir}/usr/share/sounds/login/startup.ogg
-    install -Dm644 ${srcdir}/plan3.ogg ${pkgdir}/usr/share/sounds/login/plan3.ogg
+    install -Dm644 plan3.ogg ${pkgdir}/usr/share/sounds/login/plan3.ogg
     install -Dm644 ${srcdir}/${_pkgname}-${pkgver}-${pkgrel}/login-sound.conf ${pkgdir}/etc/login-sound.conf
 
     install -m755 ${srcdir}/${_pkgname}-${pkgver}-${pkgrel}/login-sound ${pkgdir}/usr/bin/login-sound
