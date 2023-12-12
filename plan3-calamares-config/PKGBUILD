@@ -1,0 +1,23 @@
+# Maintainer: Infilit @ LeChan Labs <tifasoftware@gmx.com>
+pkgname=plan3-calamares-config
+_pkgname=plan3-calamares-config
+_destname1="/usr"
+_destname2="/etc"
+pkgver=23.12
+pkgrel=01
+pkgdesc="Plan 3 Calamares Config Files"
+arch=('any')
+url="https://github.com/plan3linux/${_pkgname}"
+license=('GPL3')
+depends=()
+makedepends=('git')
+options=(!strip !emptydirs)
+install='readme.install'
+conflicts=()
+replaces=()
+source=($_pkgname-${pkgver}-${pkgrel}::git+$url)
+sha256sums=('SKIP')
+package() {
+	#cp -r ${srcdir}/${_pkgname}-${pkgver}-${pkgrel}/${_destname1} ${pkgdir}
+	cp -r ${srcdir}/${_pkgname}-${pkgver}-${pkgrel}/${_destname2} ${pkgdir}
+}
