@@ -13,3 +13,6 @@
 [submodule "i3lock-color"]
 	path = i3lock-color
 	url = https://aur.archlinux.org/i3lock-color.git
+[submodule "mkinitcpio-openswap"]
+	path = mkinitcpio-openswap
+	url = https://aur.archlinux.org/mkinitcpio-openswap.git
