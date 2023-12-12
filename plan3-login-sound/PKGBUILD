@@ -1,0 +1,31 @@
+# Maintainer: Infilit @ LeChan Labs <tifasoftware@gmx.com>
+pkgname=plan3-login-sound
+_pkgname=login-sound
+_destname1="/usr"
+_destname2="/etc"
+pkgver=23.12
+pkgrel=02
+pkgdesc="Plan 3 Login Sound"
+arch=('any')
+url="https://github.com/tifasoftware/${_pkgname}"
+license=('GPL3')
+depends=('bspwm' 'polybar' 'rofi' 'picom' 'sxhkd' 'conky' 'plan3-base-config-git')
+makedepends=('git')
+options=(!strip !emptydirs)
+install='readme.install'
+conflicts=()
+replaces=()
+source=($_pkgname-${pkgver}-${pkgrel}::git+$url)
+sha256sums=('SKIP')
+package() {
+	#cp -r ${srcdir}/${_pkgname}-${pkgver}-${pkgrel}/${_destname1} ${pkgdir}
+	#cp -r ${srcdir}/${_pkgname}-${pkgver}-${pkgrel}/${_destname2} ${pkgdir}
+
+    mkdir -p ${pkgdir}/usr/share/sounds/login
+
+    install -Dm644 ${srcdir}/${_pkgname}-${pkgver}-${pkgrel}/startup.ogg ${pkgdir}/usr/share/sounds/login/startup.ogg
+    install -Dm644 ${srcdir}/plan3.ogg ${pkgdir}/usr/share/sounds/login/plan3.ogg
+    install -Dm644 ${srcdir}/${_pkgname}-${pkgver}-${pkgrel}/login-sound.conf ${pkgdir}/etc/login-sound.conf
+
+    install -m755 ${srcdir}/${_pkgname}-${pkgver}-${pkgrel}/login-sound ${pkgdir}/usr/bin/login-sound
+}
