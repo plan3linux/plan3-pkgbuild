@@ -1,4 +1,4 @@
-# Maintainer: Erik Dubois <erik.dubois@gmail.com>
+# Maintainer: Infilit @ LeChan Labs <tifasoftware@gmx.com>
 pkgname=plan3-base-config-git
 _pkgname=plan3-base-config
 _destname1="/usr"

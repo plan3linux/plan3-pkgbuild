@@ -1,4 +1,4 @@
-# Maintainer: Erik Dubois <erik.dubois@gmail.com>
+# Maintainer: Infilit @ LeChan Labs <tifasoftware@gmx.com>
 pkgname=archlinux-logout-git
 _pkgname=archlinux-logout
 _destname1="/usr"
