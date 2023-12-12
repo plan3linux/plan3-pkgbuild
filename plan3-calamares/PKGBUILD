@@ -1,4 +1,5 @@
-pkgname=alci-calamares
+# Maintainer: Infilit @ LeChan Labs <tifasoftware@gmx.com>
+pkgname=plan3-calamares
 _pkgname=calamares
 pkgver=3.3.0.231125
 pkgrel=01
