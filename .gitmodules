@@ -16,3 +16,6 @@
 [submodule "mkinitcpio-openswap"]
 	path = mkinitcpio-openswap
 	url = https://aur.archlinux.org/mkinitcpio-openswap.git
+[submodule "ckbcomp"]
+	path = ckbcomp
+	url = https://aur.archlinux.org/ckbcomp.git
